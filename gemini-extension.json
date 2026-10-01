@@ -1,0 +1,12 @@
+{
+  "name": "venunite-events",
+  "version": "1.0.0",
+  "description": "Find US local events by place, date, interests, and budget with VenuNite.",
+  "mcpServers": {
+    "venunite-events": {
+      "httpUrl": "https://mcp.venunite.com/v1/mcp/",
+      "includeTools": ["search_events"],
+      "timeout": 60000
+    }
+  }
+}

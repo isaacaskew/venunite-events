@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "venunite-events": {
+      "url": "https://mcp.venunite.com/v1/mcp/"
+    }
+  }
+}

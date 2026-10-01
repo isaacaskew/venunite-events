@@ -1,0 +1,12 @@
+{
+  "name": "venunite",
+  "description": "VenuNite event discovery tools for Claude Code.",
+  "owner": {"name": "VenuNite", "email": "isaac@venunite.com"},
+  "plugins": [
+    {
+      "name": "venunite-events",
+      "source": "./",
+      "description": "Find US local events by place, date, interests, and budget."
+    }
+  ]
+}

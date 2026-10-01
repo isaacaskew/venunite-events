@@ -1,0 +1,10 @@
+{
+  "name": "venunite-events",
+  "version": "1.0.0",
+  "description": "Find US local events by place, date, interests, and budget with VenuNite.",
+  "author": {"name": "VenuNite", "email": "isaac@venunite.com", "url": "https://venunite.com"},
+  "homepage": "https://venunite.com/developers/mcp",
+  "repository": "https://github.com/isaacaskew/venunite-events",
+  "license": "MIT",
+  "keywords": ["events", "local", "music", "activities", "mcp"]
+}
