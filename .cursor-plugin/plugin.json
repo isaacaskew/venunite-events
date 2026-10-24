@@ -1,0 +1,22 @@
+{
+  "name": "venunite-events",
+  "version": "1.0.0",
+  "description": "Find US local events by place, date, interests and budget. Free personal search needs no signup or API key.",
+  "author": {
+    "name": "VenuNite",
+    "email": "isaac@venunite.com"
+  },
+  "homepage": "https://venunite.com/developers/mcp",
+  "repository": "https://github.com/isaacaskew/venunite-events",
+  "license": "MIT",
+  "keywords": [
+    "local events",
+    "things to do",
+    "live music",
+    "comedy",
+    "trivia",
+    "community",
+    "MCP"
+  ],
+  "mcpServers": "./configs/cursor.json"
+}

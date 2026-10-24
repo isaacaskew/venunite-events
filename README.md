@@ -15,6 +15,23 @@ Client subscriptions and model usage are governed by the client provider.
 [Service terms](https://venunite.com/terms) ·
 [Support](mailto:isaac@venunite.com)
 
+## Free personal access and paid use
+
+| Access | Calls/minute | Calls/day | Results/search | Search horizon |
+| --- | --- | --- | --- | --- |
+| No signup or key | 30 | 100 per retained signed transport session | 20 | 90 days |
+| Optional free account key | 30 | 500 per account, shared across keys | 20 | 90 days |
+
+Anonymous access also has shared-network abuse limits and a 10,000-result-row
+daily allowance per source IP. Clients must retain the server-issued session
+to keep a session allowance. Free keys have a 10,000-result-row daily allowance
+per account. The two access modes use the same event search and coverage.
+
+Commercial products, bulk extraction, and REST API use require the appropriate
+paid plan. Check the [MCP page](https://venunite.com/developers/mcp) for current
+limits and the [service terms](https://venunite.com/terms) for permitted use.
+No signup is required to try personal event search.
+
 ## Gemini CLI
 
 ```sh
@@ -70,6 +87,11 @@ controls and review its tools before use.
 [VS Code MCP documentation](https://code.visualstudio.com/docs/agent-customization/mcp-servers)
 
 ## Cursor
+
+This repository includes a Cursor plugin manifest at
+[`.cursor-plugin/plugin.json`](.cursor-plugin/plugin.json), which connects to
+the hosted server without credentials. Marketplace listing requires Cursor's
+separate review; the manifest alone does not mean it is listed.
 
 Merge [`configs/cursor.json`](configs/cursor.json) into `.cursor/mcp.json` in
 your project or `~/.cursor/mcp.json` for your user. Preserve existing entries.
