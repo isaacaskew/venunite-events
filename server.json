@@ -1,0 +1,80 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.isaacaskew/venunite-events",
+  "description": "Free US local event search. No signup or API key; 90-day lookahead. Paid commercial and bulk access.",
+  "title": "VenuNite Events",
+  "version": "0.3.3",
+  "websiteUrl": "https://venunite.com/developers/mcp",
+  "icons": [
+    {
+      "src": "https://venunite.com/icons/icon-512x512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "venunite-events",
+      "version": "0.3.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "description": "Optional VenuNite key. Search works without signup or a key: 30 tool calls/minute, 100/day per retained signed session, 20 results/search, and 90-day lookahead. Anonymous network limits also apply. A free account key provides 30 tool calls/minute and 500/day shared across the account’s keys, with the same search results and lookahead. Create a key at https://venunite.com/developers/keys. Commercial and bulk use require a paid plan. A portal-issued live key is required for create_ticket_handoff. Handoffs require the user to select Continue to seller checkout and do not buy or reserve tickets.",
+          "isSecret": true,
+          "name": "VENUNITE_API_KEY",
+          "isRequired": false
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.venunite.com/v1/mcp/",
+      "headers": [
+        {
+          "description": "Optional for search; required for create_ticket_handoff. Supply Bearer followed by your portal-issued vn_live_ key from https://venunite.com/developers/keys. Omit this header for anonymous discovery. Never share the key in a URL.",
+          "isSecret": true,
+          "placeholder": "Bearer vn_live_...",
+          "name": "Authorization",
+          "isRequired": false
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "attribution": "Use returned VenuNite event_url and handoff_url; preserve source provenance.",
+      "documentation": "https://venunite.com/developers/mcp",
+      "keywords": [
+        "local events",
+        "trivia",
+        "libraries",
+        "farmers markets",
+        "live music",
+        "community events",
+        "ticket handoffs"
+      ],
+      "openapi": "https://venunite.com/v1/openapi.json",
+      "ticketing": "User-confirmed external checkout; no purchase, reservation or inventory guarantee.",
+      "tools": [
+        "search_events",
+        "create_ticket_handoff"
+      ],
+      "access": {
+        "anonymous": "No signup or API key for personal event search. 30 calls/minute; 100/day per retained signed session; 20 results/search; 90-day lookahead. Shared IP abuse and row limits also apply.",
+        "freeKey": "Optional free account key: 30 calls/minute and 500/day across all account keys; 20 results/search; 90-day lookahead.",
+        "commercial": "Paid plans for commercial and bulk use. See https://venunite.com/developers/mcp for current limits and terms."
+      }
+    }
+  },
+  "repository": {
+    "url": "https://github.com/isaacaskew/venunite-events",
+    "source": "github"
+  }
+}
